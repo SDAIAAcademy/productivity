@@ -27,6 +27,10 @@ Free tiers are enough for most labs. Where a feature is limited or unavailable i
 | 1 | Test the edges, then sanitise | [`D1_2_edges_and_safety.html`](D1_2_edges_and_safety.html) | `accommodation_request.docx`, `beneficiary_inquiries_q3.xlsx` |
 | 1 | From a vague request to a precise prompt (RICE) | [`D1_3_rice.html`](D1_3_rice.html) | `minutes_portal_committee.pdf` |
 | 1 | Context document and prompt library | [`D1_4_context_library.html`](D1_4_context_library.html) | `my_productivity_kit.xlsx` |
+| 2 | Clear the inbox | [`D2_1_inbox.html`](D2_1_inbox.html) | `inbox_week43.txt`, `report_excerpt_en.docx`, `glossary_en_ar.xlsx` |
+| 2 | From transcript to decisions | [`D2_2_transcript_quotes.html`](D2_2_transcript_quotes.html) | `meeting_transcript_sept_review.txt`, `quote_*.pdf`, `procurement_guide.pdf` |
+| 2 | Analyse the inquiries, repair the budget | [`D2_3_inquiries_budget.html`](D2_3_inquiries_budget.html) | `beneficiary_inquiries_q3.xlsx`, `training_budget_2026.xlsx`, `service_kpis_2026.xlsx` |
+| 2 | Decision deck in 25 minutes | [`D2_4_decision_deck.html`](D2_4_decision_deck.html) | `quarterly_report_q3_2026.pdf`, `visual_identity_guide.pdf` |
 
 ## File pack
 
