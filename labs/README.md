@@ -31,6 +31,10 @@ Free tiers are enough for most labs. Where a feature is limited or unavailable i
 | 2 | From transcript to decisions | [`D2_2_transcript_quotes.html`](D2_2_transcript_quotes.html) | `meeting_transcript_sept_review.txt`, `quote_*.pdf`, `procurement_guide.pdf` |
 | 2 | Analyse the inquiries, repair the budget | [`D2_3_inquiries_budget.html`](D2_3_inquiries_budget.html) | `beneficiary_inquiries_q3.xlsx`, `training_budget_2026.xlsx`, `service_kpis_2026.xlsx` |
 | 2 | Decision deck in 25 minutes | [`D2_4_decision_deck.html`](D2_4_decision_deck.html) | `quarterly_report_q3_2026.pdf`, `visual_identity_guide.pdf` |
+| 3 | Research brief and verification log | [`D3_1_research_brief.html`](D3_1_research_brief.html) | none (deep research in two apps) |
+| 3 | Ask our policies (notebook) | [`D3_2_ask_our_policies.html`](D3_2_ask_our_policies.html) | `policy_flexible_work.pdf`, `hr_faq.pdf`, `procurement_guide.pdf`, `lecture_05_service_quality.pdf` |
+| 3 | Your custom assistant | [`D3_3_custom_assistant.html`](D3_3_custom_assistant.html) | `hr_faq.pdf`, `policy_flexible_work.pdf` |
+| 3 | Redesign the monthly report | [`D3_4_workflow_redesign.html`](D3_4_workflow_redesign.html) | `beneficiary_inquiries_q3.xlsx`, `inbox_week43.txt` |
 
 ## File pack
 
