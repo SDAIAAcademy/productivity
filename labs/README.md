@@ -35,6 +35,11 @@ Free tiers are enough for most labs. Where a feature is limited or unavailable i
 | 3 | Ask our policies (notebook) | [`D3_2_ask_our_policies.html`](D3_2_ask_our_policies.html) | `policy_flexible_work.pdf`, `hr_faq.pdf`, `procurement_guide.pdf`, `lecture_05_service_quality.pdf` |
 | 3 | Your custom assistant | [`D3_3_custom_assistant.html`](D3_3_custom_assistant.html) | `hr_faq.pdf`, `policy_flexible_work.pdf` |
 | 3 | Redesign the monthly report | [`D3_4_workflow_redesign.html`](D3_4_workflow_redesign.html) | `beneficiary_inquiries_q3.xlsx`, `inbox_week43.txt` |
+| 4 | Delegate the weekly bulletin to an agent | [`D4_1_bulletin_agent.html`](D4_1_bulletin_agent.html) | `circulars/` |
+| 4 | From idea to specification | [`D4_2_idea_to_spec.html`](D4_2_idea_to_spec.html) | none (BRD, SPEC, mock-ups, AGENTS.md) |
+| 4 | Build it | [`D4_3_build_it.html`](D4_3_build_it.html) | the documents from 4.2 |
+| 4 | Adoption plan and capstone plan | [`D4_4_adoption_plan.html`](D4_4_adoption_plan.html) | `my_productivity_kit.xlsx` |
+| 5 | Capstone: canvas, rubric, presentation | [`capstone.html`](capstone.html) | |
 
 ## File pack
 
