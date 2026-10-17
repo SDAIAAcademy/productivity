@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -1 24 24">
+  <radialGradient id="a" cx=".85" cy="1" r="1.05" gradientTransform="matrix(-.54 -.78 .66 -.63 .65 2.3)">
+    <stop offset=".1" stop-color="#00aeff"/>
+    <stop offset=".77" stop-color="#2253ce"/>
+    <stop offset="1" stop-color="#0736c4"/>
+  </radialGradient>
+  <radialGradient id="b" cx=".18" cy=".33" r=".96" gradientTransform="matrix(.55 .79 -.7 .61 .31 -.02)">
+    <stop stop-color="#ffb657"/>
+    <stop offset=".6" stop-color="#ff5f3d"/>
+    <stop offset=".9" stop-color="#c02b3c"/>
+  </radialGradient>
+  <radialGradient id="e" cx=".83" cy="-.1" r="1.4" gradientTransform="matrix(.33 -.9 .94 .3 -.01 1.87)">
+    <stop offset=".1" stop-color="#8c48ff"/>
+    <stop offset=".5" stop-color="#f2598a"/>
+    <stop offset=".9" stop-color="#ffb152"/>
+  </radialGradient>
+  <linearGradient id="c" x1=".39" x2=".47" y1=".12" y2="1.04">
+    <stop offset=".16" stop-color="#0d91e1"/>
+    <stop offset=".5" stop-color="#52b471"/>
+    <stop offset=".7" stop-color="#98bd42"/>
+    <stop offset=".9" stop-color="#ffc800"/>
+  </linearGradient>
+  <linearGradient id="d" x1=".46" x2=".5" y2="1">
+    <stop stop-color="#3dcbff"/>
+    <stop offset=".25" stop-color="#0588f700"/>
+  </linearGradient>
+  <linearGradient id="f" x1=".16" x2=".17" y1="1.06" y2=".8">
+    <stop offset=".04" stop-color="#f8adfa"/>
+    <stop offset=".71" stop-color="#a86edd00"/>
+  </linearGradient>
+  <path fill="url(#a)" d="M17.53 1.83A2.5 2.5 0 0 0 15.11 0h-.74a2.5 2.5 0 0 0-2.48 2.09l-1.26 6.93.31-1.08a2.5 2.5 0 0 1 2.42-1.83h4.29l1.8.7 1.73-.7h-.5a2.5 2.5 0 0 1-2.43-1.83z"/>
+  <path fill="url(#b)" d="M6.73 20.16A2.5 2.5 0 0 0 9.15 22h1.57c1.37 0 2.49-1.1 2.52-2.48l.17-6.69-.35 1.23a2.5 2.5 0 0 1-2.43 1.83H6.31l-1.54-.84-1.66.84h.5c1.12 0 2.1.75 2.42 1.84z"/>
+  <defs><path id="x" d="M15 0H6.25c-2.5 0-4 3.33-5 6.66C.07 10.61-1.48 15.9 3 15.9h3.78c1.13 0 2.12-.76 2.43-1.85.66-2.32 1.8-6.36 2.71-9.44.46-1.56.85-2.9 1.43-3.74A2 2 0 0 1 15 0"/></defs>
+  <use href="#x" fill="url(#c)"/>
+  <use href="#x" fill="url(#d)"/>
+  <g transform="rotate(180 12 11)">
+    <use href="#x" fill="url(#e)"/>
+    <use href="#x" fill="url(#f)"/>
+  </g>
+</svg>

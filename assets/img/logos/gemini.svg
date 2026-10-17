@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 65">
+  <mask id="b">
+    <path fill="#fff" d="M32.45 0c.68 0 1.27.47 1.44 1.13a39 39 0 0 0 2 5.9 41.7 41.7 0 0 0 21.97 21.98 39 39 0 0 0 5.91 2 1.48 1.48 0 0 1 0 2.88 39 39 0 0 0-5.9 2q-7.5 3.22-13.13 8.85a42 42 0 0 0-8.85 13.12 39 39 0 0 0-2 5.91 1.5 1.5 0 0 1-1.44 1.12c-.68 0-1.28-.46-1.44-1.12a39 39 0 0 0-2-5.9A41.6 41.6 0 0 0 7.03 35.88a39 39 0 0 0-5.9-2A1.5 1.5 0 0 1 0 32.45c0-.68.47-1.27 1.13-1.44a39 39 0 0 0 5.9-2A41.6 41.6 0 0 0 29.01 7.03a39 39 0 0 0 2-5.9A1.5 1.5 0 0 1 32.45 0"/>
+  </mask>
+  <g mask="url(#b)">
+    <ellipse cx="11.47" cy="32.81" rx="14.41" ry="16.96" fill="#ffe432" filter="url(#c)" transform="rotate(19.58)"/>
+    <ellipse cx="27.43" cy="2.59" rx="18.65" ry="19.07" fill="#fc413d" filter="url(#d)"/>
+    <use href="#f" filter="url(#e)"/>
+    <use href="#f" filter="url(#e)"/>
+    <ellipse cx="-12.11" cy="58.43" rx="19.11" ry="21.04" fill="#00b95c" filter="url(#e)" transform="rotate(-31.31)"/>
+    <ellipse cx="67.39" cy="25.33" rx="18.35" ry="17.67" fill="#3186ff" filter="url(#i)"/>
+    <ellipse cx="14.36" cy="18.14" rx="21.22" ry="22.38" fill="#fbbc04" filter="url(#j)" transform="rotate(37.15)"/>
+    <ellipse cx="57.76" cy=".04" rx="24.47" ry="22.61" fill="#3186ff" filter="url(#k)" transform="rotate(34.56)"/>
+    <ellipse cx="29.22" cy="30.69" rx="16.47" ry="8.66" fill="#749bff" filter="url(#l)" transform="rotate(-36.33)"/>
+    <ellipse cx="12.31" cy="15.99" rx="27.98" ry="17.39" fill="#fc413d" filter="url(#m)" transform="rotate(-42.84)"/>
+    <ellipse cx="38.28" cy="30.08" rx="14.99" ry="8.72" fill="#ffee48" filter="url(#n)" transform="rotate(35.64)"/>
+  </g>
+  <defs>
+    <ellipse id="f" cx="16.16" cy="58.23" rx="19.5" ry="25.26" fill="#00b95c" transform="rotate(-2.77)"/>
+    <filter id="c" x="-1" y="-1" width="3" height="3"><feGaussianBlur stdDeviation="2.46"/></filter>
+    <filter id="d" x="-1" y="-1" width="3" height="3"><feGaussianBlur stdDeviation="11.89"/></filter>
+    <filter id="e" x="-1" y="-1" width="3" height="3"><feGaussianBlur stdDeviation="10.11"/></filter>
+    <filter id="i" x="-1" y="-1" width="3" height="3"><feGaussianBlur stdDeviation="9.61"/></filter>
+    <filter id="j" x="-1" y="-1" width="3" height="3"><feGaussianBlur stdDeviation="8.71"/></filter>
+    <filter id="k" x="-1" y="-1" width="3" height="3"><feGaussianBlur stdDeviation="7.78"/></filter>
+    <filter id="l" x="-1" y="-1" width="3" height="3"><feGaussianBlur stdDeviation="6.96"/></filter>
+    <filter id="m" x="-1" y="-1" width="3" height="3"><feGaussianBlur stdDeviation="5.88"/></filter>
+    <filter id="n" x="-1" y="-1" width="3" height="3"><feGaussianBlur stdDeviation="7.27"/></filter>
+  </defs>
+</svg>

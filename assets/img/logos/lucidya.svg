@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" viewBox="0 0 24 24">
+  <linearGradient id="g" y1="1">
+    <stop offset=".15" stop-color="#19174f"/>
+    <stop offset=".95" stop-color="#466aaf"/>
+  </linearGradient>
+  <path fill="url(#g)" d="M.2 15.15v8.64h8.65L23.8 8.84V.2h-8.65zm.61.6h7.43v7.43H.8zM15.76.81h7.43v7.42h-7.43z"/>
+</svg>

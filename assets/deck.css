@@ -221,7 +221,7 @@ pre.code .hl-line { background: rgba(255,181,72,.16); display: inline-block; wid
 
 /* horizontal bars */
 .bars { display: grid; gap: 12px; font-size: 22px; }
-.bars .row { display: grid; grid-template-columns: 260px 1fr 90px; gap: 16px; align-items: center; }
+.bars .row { display: grid; grid-template-columns: 260px 1fr minmax(90px, auto); gap: 16px; align-items: center; }
 .bars .bar { height: 26px; border-radius: 6px; background: var(--c, var(--teal)); width: var(--w); }
 .bars .val { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
 
@@ -403,7 +403,7 @@ body.overview .slide.active { outline-color: var(--amber); }
 }
 .prompt .seg[data-k] { position: relative; }
 .legend { display: flex; flex-wrap: wrap; gap: 8px 10px; margin-top: 16px; }
-.legend span { font-size: 19px; font-weight: 600; padding: 4px 14px; border-radius: 999px; color: var(--c);
+.legend span { font-size: 19px; font-weight: 600; padding: 4px 14px; border-radius: 999px; color: color-mix(in srgb, var(--c) 72%, #000);
   background: color-mix(in srgb, var(--c) 14%, #fff); border: 1px solid color-mix(in srgb, var(--c) 35%, #fff); }
 
 .chat { display: flex; flex-direction: column; gap: 12px; font-size: 22px; line-height: 1.5; }
