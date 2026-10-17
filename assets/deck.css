@@ -272,6 +272,16 @@ pre.code .hl-line { background: rgba(255,181,72,.16); display: inline-block; wid
 }
 .timer-btns button:hover { background: rgba(255,255,255,.12); }
 
+/* capstone day: running order and "now presenting" */
+.slide.order input { font: inherit; width: 100%; border: none; border-bottom: 1px dashed var(--line); background: transparent; color: var(--ink); padding: 2px 0; }
+.slide.presenting .center input {
+  font: 700 72px var(--font); text-align: center; width: 100%; max-width: 1300px; color: #fff;
+  background: transparent; border: none; border-bottom: 2px dashed rgba(255,255,255,.35); padding: 6px 0;
+}
+.timers { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; text-align: center; }
+.timers h3 { color: rgba(255,255,255,.85); }
+.timers .timer { font-size: 150px; }
+
 /* lab slide */
 .slide.lab { background: linear-gradient(90deg, #fff 0 52%, var(--paper) 52%); }
 .lab-tag {

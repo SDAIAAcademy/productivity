@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>رفع الإنتاجية بالذكاء الاصطناعي</title>
+<link rel="icon" href="assets/img/academy.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+Arabic:wght@400;600;700&family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1c355e; --teal: #00ae8d; --coral: #e96852; --cyan: #00c1de; --amber: #ffb548; --purple: #625d9c;
+    --ink: #101820; --paper: #f7f5f0; --paper-2: #efece4; --line: #d4d0c5; --muted: #5b6472;
+    --font: "IBM Plex Sans Arabic", "IBM Plex Sans", system-ui, sans-serif; --mono: "IBM Plex Mono", ui-monospace, monospace;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.7 var(--font); }
+  a { color: var(--teal); }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  header {
+    background: radial-gradient(900px 500px at 15% 0%, rgba(0,174,141,.25), transparent 60%),
+                radial-gradient(700px 400px at 100% 100%, rgba(255,181,72,.18), transparent 60%), var(--navy);
+    color: #fff; padding: 28px 0 56px;
+  }
+  .logo { height: 44px; color: #fff; display: flex; }
+  .logo svg { height: 100%; width: auto; }
+  .kicker { font-size: 15px; font-weight: 600; color: var(--amber); margin: 48px 0 10px; }
+  h1 { font-size: clamp(34px, 6vw, 58px); line-height: 1.2; margin: 0 0 14px; }
+  header p { color: rgba(255,255,255,.82); font-size: 20px; max-width: 800px; margin: 0; }
+  .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+  .meta span { font-size: 14px; padding: 6px 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,.3); }
+  .meta span.track { background: var(--amber); color: var(--ink); border-color: var(--amber); font-weight: 600; }
+  h2 { color: var(--navy); font-size: 28px; margin: 56px 0 16px; }
+  h3 { color: var(--navy); margin: 0 0 6px; font-size: 20px; }
+  .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  .card { background: #fff; border: 1px solid var(--line); border-top: 5px solid var(--c, var(--navy)); border-radius: 14px; padding: 20px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15px; }
+  .day { background: #fff; border: 1px solid var(--line); border-radius: 16px; margin-bottom: 18px; overflow: hidden; }
+  .day-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; padding: 18px 22px; border-right: 8px solid var(--c); }
+  .day-head .t { font-size: 14px; color: var(--c); font-weight: 700; }
+  .day-head h3 { font-size: 22px; margin: 2px 0 0; }
+  .btn { display: inline-block; text-decoration: none; background: var(--navy); color: #fff; padding: 9px 16px; border-radius: 10px; font-weight: 600; font-size: 15px; }
+  .btn:hover { background: #142846; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  td, th { padding: 10px 22px; border-top: 1px solid var(--paper-2); text-align: right; vertical-align: top; }
+  th { font-size: 13px; color: var(--muted); font-weight: 600; }
+  td.brk { color: var(--muted); }
+  code { font-family: var(--mono); font-size: 13.5px; background: rgba(28,53,94,.07); padding: 1px 6px; border-radius: 5px; direction: ltr; unicode-bidi: isolate; }
+  .two { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  ul { padding-right: 20px; padding-left: 0; } li { margin-bottom: 6px; }
+  .bar { display: grid; grid-template-columns: 1fr 52px; gap: 10px; align-items: center; margin-bottom: 8px; font-size: 15px; }
+  .bar i { display: block; height: 10px; border-radius: 5px; background: var(--c, var(--teal)); width: var(--w); margin-top: 4px; }
+  .files { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .files a { display: block; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; text-decoration: none; color: var(--ink); }
+  .files a b { display: block; font-family: var(--mono); font-size: 14px; color: var(--navy); direction: ltr; text-align: right; }
+  .files a span { font-size: 14px; color: var(--muted); }
+  .note { background: #fff; border: 1px solid var(--line); border-right: 6px solid var(--amber); border-radius: 12px; padding: 14px 18px; font-size: 15px; }
+  footer { margin: 64px 0 0; padding: 24px 0 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  .scroll { overflow-x: auto; }
+  @media (max-width: 640px) { td, th { padding: 9px 12px; } .day-head { padding: 16px; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="logo" id="logo"></div>
+    <div class="kicker">مسار الطلاقة في الذكاء الاصطناعي · أكاديمية سدايا</div>
+    <h1>رفع الإنتاجية بالذكاء الاصطناعي</h1>
+    <p>من «جرّبت ChatGPT» إلى مكاسب مقيسة وآمنة ومتكررة: تقرّر ما تفوّضه، وتصفه بدقة، وتتحقق مما يعود، وتتحمّل مسؤولية النتيجة؛ في الكتابة والمستندات والبيانات والبحث والمساعدات المخصّصة والوكلاء، والأدوات التي تبنيها بوصفها.</p>
+    <div class="meta">
+      <span class="track">مسار الطلاقة في الذكاء الاصطناعي</span>
+      <span>4 أيام تدريب × 4 جلسات، ويوم للمشروع الختامي</span>
+      <span>16 تمرينًا في تطبيقات الذكاء الاصطناعي</span>
+      <span>بلا برمجة</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <h2>حالة واحدة طوال الأسبوع</h2>
+  <p><b>مركز الواحة للخدمات المشتركة</b> مركز حكومي افتراضي يقدّم خدمات الموارد البشرية والمالية والمشتريات وخدمة المستفيدين لست جهات حكومية. يؤدي الموظفون أدوارهم كما هي، ويؤدي الطلاب دور <b>متدرّب تعاوني</b> في المركز، ولأغلب التمارين بديل دراسي. كل الملفات اصطناعية: محاضر، وتقارير، وسياسات، وعروض أسعار، وبريد، وجداول، فيها مشكلات مقصودة تشبه الواقع، ولا تكشف بيانات أي شخص أو جهة حقيقية.</p>
+  <div class="grid">
+    <div class="card" style="--c:var(--teal)"><h3>الأساسيات</h3><p>الطلاقة 4D، والحدود، والاستخدام الآمن، وإطار RICE، والسياق الدائم</p></div>
+    <div class="card" style="--c:var(--cyan)"><h3>المهام اليومية</h3><p>الكتابة بالعربية، والقراءة والاستخراج، والبيانات والجداول، والعروض والصور</p></div>
+    <div class="card" style="--c:var(--coral)"><h3>البحث والمعرفة</h3><p>البحث العميق والتحقق، ودفاتر المعرفة، والمساعدات المخصّصة، وإعادة تصميم سير العمل</p></div>
+    <div class="card" style="--c:var(--purple)"><h3>الوكلاء والبناء</h3><p>الوكلاء والمهام المجدولة، والبرمجة التوليدية، والتبنّي المسؤول</p></div>
+    <div class="card" style="--c:var(--amber)"><h3>المشروع الختامي</h3><p>مهمة حقيقية أُعيد تصميمها: قبل وبعد، بالأرقام، وبتجربة حية</p></div>
+  </div>
+
+  <h2>الجدول والمواد</h2>
+  <p style="color:var(--muted)">كل يوم: الجلسة 1 ← استراحة 10 دقائق ← الجلسة 2 ← استراحة 20 دقيقة ← الجلسة 3 ← استراحة 10 دقائق ← الجلسة 4. كل جلسة نحو 20 إلى 25 دقيقة من المفاهيم والعرض الحي، ثم تمرين من 25 دقيقة. في الشرائح: <code>F</code> ملء الشاشة، والأسهم للتنقل، و<code>N</code> ملاحظات المدرّب، و<code>?</code> المساعدة.</p>
+
+  <div class="day">
+    <div class="day-head" style="--c:var(--teal)"><div><div class="t">اليوم 1</div><h3>أساسيات العمل مع الذكاء الاصطناعي</h3></div><a class="btn" href="slides/day1.html">افتح الشرائح ←</a></div>
+    <div class="scroll"><table>
+      <tr><th>الجلسة</th><th>التمرين</th></tr>
+      <tr><td><b>1 · الذكاء الاصطناعي في العمل: أين يساعد وأين يضرّ</b>: ما تغيّر، الأدلة وحدودها، كيف يعمل التطبيق</td><td><a href="labs/D1_1_task_map.html">1.1 خريطة مهامي وخط الأساس</a></td></tr>
+      <tr><td class="brk" colspan="2">استراحة · 10 دقائق</td></tr>
+      <tr><td><b>2 · الطلاقة 4D والحدود والاستخدام الآمن</b>: خصائص النموذج، تصنيف البيانات ومعالجتها</td><td><a href="labs/D1_2_edges_and_safety.html">1.2 اختبر الحدود، ثم عالج البيانات</a></td></tr>
+      <tr><td class="brk" colspan="2">استراحة · 20 دقيقة</td></tr>
+      <tr><td><b>3 · هندسة الأوامر بإطار RICE</b>: ما يخمّنه التطبيق، الدور والتعليمات والسياق والتوقّع، معيار القبول</td><td><a href="labs/D1_3_rice.html">1.3 من طلب عام إلى أمر دقيق</a></td></tr>
+      <tr><td class="brk" colspan="2">استراحة · 10 دقائق</td></tr>
+      <tr><td><b>4 · الحوار والتحسين والسياق الدائم</b>: دع التطبيق يسألك، وثيقة سياق العمل، مكتبة الأوامر</td><td><a href="labs/D1_4_context_library.html">1.4 وثيقة سياق العمل ومكتبة الأوامر</a></td></tr>
+    </table></div>
+  </div>
+
+  <div class="day">
+    <div class="day-head" style="--c:var(--cyan)"><div><div class="t">اليوم 2</div><h3>الإنتاجية في المهام اليومية</h3></div><a class="btn" href="slides/day2.html">افتح الشرائح ←</a></div>
+    <div class="scroll"><table>
+      <tr><th>الجلسة</th><th>التمرين</th></tr>
+      <tr><td><b>1 · الكتابة والمراسلات بالعربية</b>: الجمهور والنبرة، إعادة الصياغة لا التوليد من فراغ، الترجمة بمسرد</td><td><a href="labs/D2_1_inbox.html">2.1 أفرغ البريد الوارد</a></td></tr>
+      <tr><td class="brk" colspan="2">استراحة · 10 دقائق</td></tr>
+      <tr><td><b>2 · القراءة والتلخيص والاستخراج</b>: الاستخراج إلى جداول، من التفريغ إلى المحضر، المقارنة بأرقام الصفحات</td><td><a href="labs/D2_2_transcript_quotes.html">2.2 من التفريغ إلى القرار</a></td></tr>
+      <tr><td class="brk" colspan="2">استراحة · 20 دقيقة</td></tr>
+      <tr><td><b>3 · البيانات والجداول</b>: الحساب بالكود لا بالتخمين، تصنيف النصوص، إصلاح الصيغ</td><td><a href="labs/D2_3_inquiries_budget.html">2.3 حلّل الاستفسارات، وأصلح الميزانية</a></td></tr>
+      <tr><td class="brk" colspan="2">استراحة · 10 دقائق</td></tr>
+      <tr><td><b>4 · العروض والصور</b>: من التقرير إلى قصة قرار، إطار RICE للصور، الإفصاح</td><td><a href="labs/D2_4_decision_deck.html">2.4 عرض قرار في 25 دقيقة</a></td></tr>
+    </table></div>
+  </div>
+
+  <div class="day">
+    <div class="day-head" style="--c:var(--coral)"><div><div class="t">اليوم 3</div><h3>البحث والمعرفة وإعادة تصميم العمل</h3></div><a class="btn" href="slides/day3.html">افتح الشرائح ←</a></div>
+    <div class="scroll"><table>
+      <tr><th>الجلسة</th><th>التمرين</th></tr>
+      <tr><td><b>1 · البحث العميق والتحقق</b>: موجز البحث، أنواع الادعاءات، القراءة الجانبية</td><td><a href="labs/D3_1_research_brief.html">3.1 موجز بحث، وسجل تحقق</a></td></tr>
+      <tr><td class="brk" colspan="2">استراحة · 10 دقائق</td></tr>
+      <tr><td><b>2 · معرفة يمكن الوثوق بها</b>: المشاريع والدفاتر، كيف يسترجع التطبيق، أسئلة لا تجيب عنها المصادر</td><td><a href="labs/D3_2_ask_our_policies.html">3.2 «اسأل سياساتنا»</a></td></tr>
+      <tr><td class="brk" colspan="2">استراحة · 20 دقيقة</td></tr>
+      <tr><td><b>3 · المساعدات المخصّصة والمهارات</b>: المنتج والعملية والأداء، قواعد «لا»، الاختبار بها وبدونها</td><td><a href="labs/D3_3_custom_assistant.html">3.3 مساعدك المخصّص</a></td></tr>
+      <tr><td class="brk" colspan="2">استراحة · 10 دقائق</td></tr>
+      <tr><td><b>4 · تفكيك سير العمل وإعادة تصميمه</b>: ما يؤديه التطبيق وما يبقى لك، القياس من البداية للنهاية، فرق المشروع</td><td><a href="labs/D3_4_workflow_redesign.html">3.4 أعد تصميم التقرير الشهري</a></td></tr>
+    </table></div>
+  </div>
+
+  <div class="day">
+    <div class="day-head" style="--c:var(--purple)"><div><div class="t">اليوم 4</div><h3>الوكلاء والبرمجة التوليدية والتبنّي</h3></div><a class="btn" href="slides/day4.html">افتح الشرائح ←</a></div>
+    <div class="scroll"><table>
+      <tr><th>الجلسة</th><th>التمرين</th></tr>
+      <tr><td><b>1 · الوكلاء والمهام المجدولة</b>: الموصّلات والصلاحيات، اعتماد الخطة، حقن التعليمات، العمل الآمن</td><td><a href="labs/D4_1_bulletin_agent.html">4.1 فوّض نشرة التعاميم الأسبوعية</a></td></tr>
+      <tr><td class="brk" colspan="2">استراحة · 10 دقائق</td></tr>
+      <tr><td><b>2 · البرمجة التوليدية 1: من الفكرة إلى المواصفات</b>: الأسئلة الستة، وثيقة المتطلبات، المواصفات، تصوّر الواجهات، AGENTS.md</td><td><a href="labs/D4_2_idea_to_spec.html">4.2 من الفكرة إلى المواصفات</a></td></tr>
+      <tr><td class="brk" colspan="2">استراحة · 20 دقيقة</td></tr>
+      <tr><td><b>3 · البرمجة التوليدية 2: ابنِ واختبر وانشر</b>: المنصّات، تعديل واحد في كل مرة، الفحوص الستة، مستويات الوصول</td><td><a href="labs/D4_3_build_it.html">4.3 ابنِها</a></td></tr>
+      <tr><td class="brk" colspan="2">استراحة · 10 دقائق</td></tr>
+      <tr><td><b>4 · التبنّي المسؤول وخطة المشروع</b>: المبادئ السبعة، الإفصاح، بطاقة التفويض، خطة 1 و7 و30</td><td><a href="labs/D4_4_adoption_plan.html">4.4 خطة التبنّي، وخطة المشروع</a></td></tr>
+    </table></div>
+  </div>
+
+  <div class="day">
+    <div class="day-head" style="--c:var(--amber)"><div><div class="t">اليوم 5</div><h3>عروض المشروع الختامي</h3></div><a class="btn" href="slides/day5.html">افتح الشرائح ←</a></div>
+    <div class="scroll"><table>
+      <tr><th>الجلسة</th><th>ملاحظات</th></tr>
+      <tr><td><b>1 · الافتتاح والتحضير الأخير</b></td><td>التوقعات ومعايير التقييم (15 دقيقة)، ثم 35 دقيقة للفرق</td></tr>
+      <tr><td class="brk" colspan="2">استراحة · 10 دقائق</td></tr>
+      <tr><td><b>2 · العروض</b></td><td>الفرق 1 إلى 3</td></tr>
+      <tr><td class="brk" colspan="2">استراحة · 20 دقيقة</td></tr>
+      <tr><td><b>3 · العروض</b></td><td>الفرق 4 إلى 6</td></tr>
+      <tr><td class="brk" colspan="2">استراحة · 10 دقائق</td></tr>
+      <tr><td><b>4 · آخر العروض والختام</b></td><td>الفريقان 7 و8، تعليق الزملاء، مراجعة المدرّب، خطة 30 يومًا</td></tr>
+    </table></div>
+  </div>
+
+  <h2 id="labs">التمارين والملفات</h2>
+  <p>كل تمرين صفحة فيها الهدف، والملفات، وخطوات بأوقات، وأوامر جاهزة للنسخ، وأسئلة تحقّق، وتمرين إضافي ✱، وملاحظات للمدرّب. نزّل من الملفات ما يذكره التمرين فقط، واحتفظ بحقيبة الإنتاجية مفتوحة طوال الأسبوع.</p>
+  <div class="note"><b>قبل اليوم 1:</b> حسابان على الأقل في تطبيقين عامين (ChatGPT أو Claude أو Gemini أو Copilot أو HUMAIN Chat)، وحساب Google لـ NotebookLM وGoogle AI Studio. الخطط المجانية تكفي لأغلب التمارين، وكل تمرين يذكر بديلًا حين تحتاج ميزة خطة مدفوعة.</div>
+  <div class="files" style="margin-top:18px">
+    <a href="labs/files/my_productivity_kit.xlsx" download><b>my_productivity_kit.xlsx</b><span>حقيبة الإنتاجية: خريطة المهام، وسجل الإنتاجية، ومكتبة الأوامر</span></a>
+    <a href="labs/files/minutes_portal_committee.pdf"><b>minutes_portal_committee.pdf</b><span>محضر اللجنة التوجيهية للبوابة · 4 صفحات</span></a>
+    <a href="labs/files/beneficiary_inquiries_q3.xlsx" download><b>beneficiary_inquiries_q3.xlsx</b><span>458 استفسارًا ببيانات شخصية اصطناعية</span></a>
+    <a href="labs/files/quarterly_report_q3_2026.pdf"><b>quarterly_report_q3_2026.pdf</b><span>تقرير الأداء الربعي · 12 صفحة</span></a>
+    <a href="labs/files/policy_flexible_work.pdf"><b>policy_flexible_work.pdf</b><span>سياسة العمل المرن</span></a>
+    <a href="labs/files/procurement_guide.pdf"><b>procurement_guide.pdf</b><span>دليل إجراءات المشتريات</span></a>
+    <a href="labs/files/hr_faq.pdf"><b>hr_faq.pdf</b><span>الأسئلة الشائعة للموظفين</span></a>
+    <a href="labs/files/quote_a_alofuq.pdf"><b>quote_a/b/c_*.pdf</b><span>ثلاثة عروض أسعار من موردين</span></a>
+    <a href="labs/files/inbox_week43.txt"><b>inbox_week43.txt</b><span>ثماني رسائل بريد</span></a>
+    <a href="labs/files/meeting_transcript_sept_review.txt"><b>meeting_transcript_sept_review.txt</b><span>تفريغ آلي لاجتماع من 40 دقيقة</span></a>
+    <a href="labs/files/training_budget_2026.xlsx" download><b>training_budget_2026.xlsx</b><span>ميزانية التدريب بصيغ معطوبة</span></a>
+    <a href="labs/files/service_kpis_2026.xlsx" download><b>service_kpis_2026.xlsx</b><span>مؤشرات الخدمة الشهرية لكل جهة</span></a>
+    <a href="labs/files/visual_identity_guide.pdf"><b>visual_identity_guide.pdf</b><span>دليل الهوية البصرية المختصر</span></a>
+    <a href="labs/D4_1_bulletin_agent.html"><b>circulars/</b><span>ستة تعاميم وقالب النشرة (من صفحة التمرين 4.1)</span></a>
+  </div>
+  <p style="color:var(--muted);font-size:15px">كل الملفات في <a href="labs/files/">labs/files/</a>، وتفاصيل كل ملف وما زُرع فيه في <a href="labs/README.md">labs/README.md</a>.</p>
+
+  <div class="two">
+    <div>
+      <h2>المشروع الختامي</h2>
+      <p>فرق من 2 إلى 3 تعيد تصميم مهمة حقيقية تتكرر في عملها أو دراستها، وتعرضها: خط الأساس، وسير العمل وبطاقة التفويض، وما بُني، وتجربة حية، والتحقق وفحص البيانات، و<b>النتيجة المقيسة</b> لتجربتين على الأقل، وخطة 30 يومًا.</p>
+      <ul>
+        <li><b>مساعد مخصّص أو مهارة</b> مُختبَرة لمهمة متكررة</li>
+        <li><b>وكيل أو مهمة مجدولة</b> تحت الإشراف</li>
+        <li><b>أداة داخلية</b> مبنية بالبرمجة التوليدية</li>
+        <li><b>مسار تعلّم</b> للطلاب: دفتر ومساعد مذاكرة واختبارات</li>
+      </ul>
+      <p>اللوحة ومعايير التقييم بمستوياتها: <a href="labs/capstone.html">labs/capstone.html</a>.</p>
+    </div>
+    <div>
+      <h2>معايير التقييم</h2>
+      <div class="bar"><span>قيمة مقيسة في تجربتين على الأقل<i style="--w:100%"></i></span><b>25%</b></div>
+      <div class="bar"><span>تصميم سير العمل والتفويض<i style="--w:80%;--c:var(--cyan)"></i></span><b>20%</b></div>
+      <div class="bar"><span>الوصف: الأوامر أو التعليمات أو المواصفات<i style="--w:80%;--c:var(--cyan)"></i></span><b>20%</b></div>
+      <div class="bar"><span>التحقق: معيار القبول والأخطاء الملتقطة<i style="--w:60%;--c:var(--coral)"></i></span><b>15%</b></div>
+      <div class="bar"><span>المسؤولية: البيانات والإفصاح وخطة التبنّي<i style="--w:40%;--c:var(--purple)"></i></span><b>10%</b></div>
+      <div class="bar"><span>العرض والتجربة الحية<i style="--w:40%;--c:var(--amber)"></i></span><b>10%</b></div>
+    </div>
+  </div>
+
+  <div class="two">
+    <div>
+      <h2>في نهاية الدورة، يستطيع المشارك أن</h2>
+      <ul>
+        <li>يحدد أين يساعد الذكاء الاصطناعي في عمله وأين يضرّ، ويقيس أثره بدل أن يخمّنه</li>
+        <li>يعالج البيانات قبل رفعها، ويلتزم بسياسة جهته ونظام حماية البيانات الشخصية</li>
+        <li>يكتب أوامر بإطار RICE ومعيار قبول، ويبني سياقًا دائمًا ومكتبة أوامر</li>
+        <li>ينجز الكتابة والقراءة والتحليل والعروض بالعربية، ويتحقق من كل رقم ومصدر</li>
+        <li>يبني دفتر معرفة ومساعدًا مخصّصًا ويختبرهما بحالات حدّية</li>
+        <li>يعيد تصميم سير عمل، ويفوّض وكيلًا بحدود آمنة، ويبني أداة صغيرة بوصفها</li>
+        <li>يضع خطة تبنٍّ لثلاثين يومًا بمؤشرات قيمة</li>
+      </ul>
+    </div>
+    <div>
+      <h2>لمن هذه الدورة</h2>
+      <p><b>الجمهور:</b> موظفو القطاعين الحكومي والخاص، وطلاب المرحلة الجامعية، ممن يستخدمون تطبيقات الذكاء الاصطناعي أحيانًا ويريدون استخدامها جيدًا في عملهم أو دراستهم. لا برمجة. من أكمل «سماي» سيعرف المفردات (RICE، والطلاقة 4D، وبطاقة التفويض)؛ وهذه الدورة تنقله من الوعي إلى الممارسة.</p>
+      <p><b>البيئة:</b> حاسب بمتصفح، وحسابات في تطبيقين عامين على الأقل، وNotebookLM، ومنصة برمجة توليدية واحدة (إطلاق أو Lovable أو Replit أو Google AI Studio).</p>
+      <p><b>الإطار:</b> الطلاقة في الذكاء الاصطناعي 4D (Dakan وFeller وAnthropic، برخصة CC BY-NC-SA 4.0)، وإطار RICE من «سماي»، ومبادئ أخلاقيات الذكاء الاصطناعي من سدايا. المصادر كاملة في <a href="README.md#sources">README</a>.</p>
+    </div>
+  </div>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار الطلاقة في الذكاء الاصطناعي · رفع الإنتاجية بالذكاء الاصطناعي. أسماء التطبيقات أمثلة لا توصيات، وكل الأسماء والجهات والأرقام في ملفات التدريب افتراضية.</div></footer>
+<script src="assets/logo.js"></script>
+<script>document.getElementById('logo').innerHTML = window.ACADEMY_LOGO || 'أكاديمية سدايا';</script>
+</body>
+</html>

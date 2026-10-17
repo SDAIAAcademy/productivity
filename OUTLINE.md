@@ -50,7 +50,7 @@ run on public AI applications without exposing any real person's or organisation
 |---|---|
 | Committee minutes: self-service portal launch (PDF) | RICE, extraction, updates for an absent manager |
 | Beneficiary inquiries, Q3 (XLSX, ~450 rows with names and mobiles) | Data safety, analysis, charts, assistant test cases |
-| Quarterly performance report (PDF, ~16 pages) | Summaries, decision deck, verification |
+| Quarterly performance report (PDF, 12 pages) | Summaries, decision deck, verification |
 | Flexible-work policy, procurement guide, HR FAQ (PDF) | Knowledge notebook, custom assistant |
 | Three supplier quotations (PDF) | Comparison with page references |
 | Inbox export (8 emails) and an English report excerpt with a glossary | Correspondence, translation |
@@ -98,7 +98,7 @@ built, and a 30-day adoption plan. Teams combine pieces of it in the capstone.
 | Session | Concepts | Lab |
 |---|---|---|
 | **1 · Agents and scheduled tasks** | The agent loop; chat vs. agent (ChatGPT agent, Claude Cowork and Chrome, Copilot Agent Mode, Manus); connectors and permissions; plan approval; scheduled tasks; working safely (scoped folder, precise verbs, draft-only) | **4.1 Delegate the weekly bulletin**: spot the risk in an agent task, then have an agent turn the circulars folder into a bulletin (draft only) and schedule it |
-| **2 · Vibe coding I: from idea to specification** | What vibe coding is; three kinds of apps; the six requirement questions; BRD → technical specification ("interview me first") → UI mock-ups → AGENTS.md; quick prototypes in Claude Artifacts / ChatGPT | **4.2 From idea to spec**: BRD, specification and two UI mock-ups for an internal tool |
+| **2 · Vibe coding I: from idea to specification** | What vibe coding is; three kinds of apps; the six requirement questions; BRD → technical specification ("interview me first") → UI mock-ups → AGENTS.md; quick prototypes in Claude Artifacts / ChatGPT | **4.2 From idea to spec**: BRD, specification, UI mock-ups and AGENTS.md for an internal tool |
 | **3 · Vibe coding II: build, test, publish** | Etlaq, Lovable, Replit, Google AI Studio Build; review the plan; one change at a time; versions; six checks before publishing; access levels; no real data | **4.3 Build it**: a working app from the spec, tested by a peer against the acceptance criteria |
 | **4 · Responsible adoption + capstone kickoff** | SDAIA's seven AI-ethics principles as workplace decisions; disclosure and the diligence statement; the delegation card; 1 / 7 / 30-day adoption; value indicators and the experiment log | **4.4 Adoption plan and capstone plan**: delegation card, ready prompt, 30-day plan; teams fill the capstone canvas |
 
