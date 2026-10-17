@@ -154,7 +154,7 @@ def find_chrome() -> str | None:
 def write_pdf(path: Path, html_text: str, chrome: str) -> None:
     with tempfile.TemporaryDirectory() as tmp:
         src = Path(tmp) / "doc.html"
-        src.write_text(html_text, encoding="utf-8")
+        src.write_text(html_text, encoding="utf-8", newline="\n")
         url = src.as_uri()
         dom = subprocess.run([chrome, "--headless=new", "--disable-gpu", "--virtual-time-budget=8000", "--dump-dom", url],
                              capture_output=True, text=True, encoding="utf-8").stdout
@@ -693,11 +693,11 @@ def main() -> None:
         if ts == "38:50":
             lines += [T.TRANSCRIPT_GAP, ""]
         lines.append(f"[{ts}] {who}: {text}")
-    (OUT / "meeting_transcript_sept_review.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    (OUT / "meeting_transcript_sept_review.txt").write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
     inbox = []
     for i, (frm, org, when, subj, body) in enumerate(T.INBOX, 1):
         inbox += [f"===== الرسالة {i} =====", f"من: {frm}", f"الجهة: {org}", f"التاريخ: {when}", f"الموضوع: {subj}", "", body, ""]
-    (OUT / "inbox_week43.txt").write_text("\n".join(inbox), encoding="utf-8")
+    (OUT / "inbox_week43.txt").write_text("\n".join(inbox), encoding="utf-8", newline="\n")
     print("  files/meeting_transcript_sept_review.txt\n  files/inbox_week43.txt")
 
     if not args.no_pdf:
@@ -765,7 +765,7 @@ def main() -> None:
           "application; C-2026-117 cancels an earlier circular.",
           "- Expected bulletin: action items 118 (update data by 31 Oct, all staff) and 120 (mandatory training 1–4 Nov, Beneficiary Services); "
           "for information 117 and 119; nothing from 121.", ""]
-    KEYS.write_text("\n".join(k) + "\n", encoding="utf-8")
+    KEYS.write_text("\n".join(k) + "\n", encoding="utf-8", newline="\n")
     print(f"KEYS\n  {KEYS.relative_to(LABS)}")
 
 
