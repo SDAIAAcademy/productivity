@@ -56,7 +56,7 @@
   <div class="kicker">الجلسة 1</div>
   <h1>الوكلاء والمهام المجدولة</h1>
   <ul class="bullets outcomes tight">
-    <li>تميّز بين تطبيق يجيب ووكيل ينفّذ، وتحدد ما يصل إليه الوكيل</li>
+    <li>تميّز بين تطبيق يجيب ووكيل ينفّذ، وتحدد ما يصل إليه عبر الموصّلات و MCP</li>
     <li>تكتشف الخطر في مهمة وكيل قبل تشغيلها</li>
     <li>تفوّض مهمة متكررة لوكيل بنطاق ضيق وأفعال دقيقة ومسودة فقط</li>
   </ul>
@@ -92,11 +92,30 @@
     <tr><td><b>ChatGPT</b></td><td>وضع الوكيل، و ChatGPT Work</td><td>متصفح افتراضي، ملفات، موصّلات (Gmail، Drive وغيرها)</td><td>وضع الخطة: تعتمد الخطة قبل التنفيذ. مهام مجدولة. خطط مدفوعة</td></tr>
     <tr><td><b>Claude</b></td><td>Cowork، و Claude in Chrome</td><td>مجلد تختاره على جهازك، ومتصفحك</td><td>ينتج ملفات Excel وPowerPoint ومستندات. خطط مدفوعة</td></tr>
     <tr><td><b>Microsoft 365 Copilot</b></td><td>وضع الوكيل في Word وExcel وPowerPoint، و Researcher و Analyst</td><td>ملفات العمل في OneDrive وSharePoint والبريد</td><td>بترخيص الجهة، وضمن حوكمتها</td></tr>
-    <tr><td><b>Manus</b></td><td>وكيل عام</td><td>متصفح وبيئة عمل سحابية</td><td>رصيد مجاني محدود</td></tr>
+    <tr><td><b>Manus</b> · <b>Genspark</b></td><td>وكلاء عامّة</td><td>متصفح وبيئة عمل سحابية</td><td>تبحث وتُنتج عروضًا وجداول وصفحات. رصيد مجاني محدود</td></tr>
     <tr><td><b>Gemini</b></td><td>وضع الوكيل</td><td>المتصفح وخدمات Google</td><td>محدود ببعض الدول واللغات</td></tr>
   </table>
   <div class="callout note mt small"><b>ثلاثة أسئلة قبل أي وكيل:</b> إلى أي ملفات وحسابات يصل؟ هل يستطيع الإرسال أو الحذف أو الدفع؟ هل تعتمد خطته قبل التنفيذ؟</div>
   <aside class="notes">الأسماء والإتاحة تتغير شهريًا، فلا تحفظها. وفي العمل: المعتمد في جهتك أولًا، وغالبًا هو Copilot بحساب العمل. الوكلاء ما زالت في بدايتها مؤسسيًا: مؤشر ستانفورد 2026 يذكر أن نشرها في الجهات ما زال بنسب أحادية في معظم الوظائف.</aside>
+</section>
+
+<section class="slide" data-label="الموصّلات و MCP">
+  <div class="kicker">إلى أين تصل اليدان؟</div>
+  <h2>الموصّل يفتح للتطبيق بابًا إلى أنظمتك، و MCP هو المقبس الموحّد</h2>
+  <div class="flow">
+    <div class="step c-navy"><b>التطبيق أو الوكيل</b>ChatGPT · Claude · Copilot · Gemini</div>
+    <div class="arrow">←</div>
+    <div class="step c-purple"><b>الموصّل</b>خادم MCP لكل خدمة</div>
+    <div class="arrow">←</div>
+    <div class="step c-teal"><b>أنظمتك</b>البريد · التقويم · الملفات · نظام الجهة</div>
+  </div>
+  <div class="cols cols-3 mt">
+    <div class="card c-teal"><h4>الموصّل · Connector</h4><p class="small mb0">صلاحية باسمك في خدمة محددة: يبحث في Drive أو SharePoint، يقرأ البريد، يقترح موعدًا.</p></div>
+    <div class="card c-purple"><h4>MCP · بروتوكول سياق النموذج</h4><p class="small mb0">معيار مفتوح مثل منفذ USB-C: موصّل يُكتب مرة، فيعمل مع كل تطبيق يدعمه، وأغلب التطبيقات الكبرى تدعمه.</p></div>
+    <div class="card c-coral"><h4>الإضافة · Plugin</h4><p class="small mb0">مهارة أو أكثر مع موصّلاتها في حزمة تُثبّت وتُشارك. المهارة «كيف»، والموصّل «الوصول».</p></div>
+  </div>
+  <div class="callout warn mt small"><b>قبل أن تفعّل موصّلًا:</b> ما الصلاحية بالضبط، قراءة فقط أم كتابة وإرسال؟ بأي حساب، العمل أم الشخصي؟ من نشره، المزوّد الرسمي أم مجهول؟ وافصله حين تنتهي.</div>
+  <aside class="notes">الموصّل هو ما يحوّل المحادثة إلى وكيل: بدونه يعمل التطبيق على ما ترفعه أنت فقط. اعرض حيًّا قائمة الموصّلات في تطبيق واحد، وافتح شاشة الصلاحيات لموصّل Drive أو OneDrive: ماذا يطلب؟ قراءة؟ كتابة؟ في الجهات، تستطيع تقنية المعلومات أن تبني خادم MCP لنظام داخلي (مثل نظام الطلبات) بصلاحية قراءة فقط، فيصير متاحًا لكل التطبيقات المعتمدة دفعة واحدة. لا تثبّت خادم MCP من مصدر لا تعرفه: هو برنامج يعمل بصلاحياتك، ويدخل منه حقن التعليمات الذي سنراه بعد قليل.</aside>
 </section>
 
 <section class="slide" data-label="أجزاء الأتمتة">
@@ -118,7 +137,7 @@
     <div class="arrow">←</div>
     <div class="step c-coral"><b>إنسان يراجع</b>ويعتمد ويرسل</div>
   </div>
-  <aside class="notes">هذه الأجزاء الأربعة كلها رأيتموها هذا الأسبوع ما عدا المشغّل: المشروع والمهارة من أمس، والموصّل هو الصلاحية. الجديد هو أن شيئًا يحدث دون أن تضغط «إرسال».</aside>
+  <aside class="notes">هذه الأجزاء الأربعة كلها رأيتموها هذا الأسبوع ما عدا المشغّل: المشروع والمهارة من أمس، والموصّل رأيناه للتو. الجديد هو أن شيئًا يحدث دون أن تضغط «إرسال».</aside>
 </section>
 
 <section class="slide" data-label="ما يناسب الأتمتة">
@@ -297,7 +316,7 @@
   <div class="flow">
     <div class="step c-navy"><b>الفكرة</b>والأسئلة الستة</div>
     <div class="arrow">←</div>
-    <div class="step c-teal"><b>وثيقة المتطلبات</b>BRD · بالعربية</div>
+    <div class="step c-teal"><b>وثيقة المتطلبات</b>PRD · بالعربية</div>
     <div class="arrow">←</div>
     <div class="step c-cyan"><b>المواصفات التقنية</b>بعد أن يستجوبك</div>
     <div class="arrow">←</div>
@@ -313,9 +332,9 @@
 </section>
 
 <section class="slide" data-label="وثيقة المتطلبات">
-  <div class="kicker">الخطوة 1 · وثيقة متطلبات العمل</div>
+  <div class="kicker">الخطوة 1 · وثيقة متطلبات المنتج</div>
   <h2>ابدأ بإجاباتك أنت، ثم دع التطبيق يكتب الوثيقة</h2>
-  <div class="prompt" data-tool="أي تطبيق محادثة · BRD"><span class="seg" style="--c:var(--purple)">أنا موظف حكومي غير تقني،</span> <span class="seg" style="--c:var(--teal)">لدي فكرة أداة داخلية أريد منك أن تكتب لها مستند متطلبات العمل (BRD) بالعربية: الهدف، والمستخدمون وصلاحياتهم، والوظائف، والبيانات، والقيود، ومعايير القبول، وما هو خارج النطاق.</span>
+  <div class="prompt" data-tool="أي تطبيق محادثة · PRD"><span class="seg" style="--c:var(--purple)">أنا موظف حكومي غير تقني،</span> <span class="seg" style="--c:var(--teal)">لدي فكرة أداة داخلية أريد منك أن تكتب لها مستند متطلبات المنتج (PRD) بالعربية: الهدف، والمستخدمون وصلاحياتهم، والوظائف، والبيانات، والقيود، ومعايير القبول، وما هو خارج النطاق.</span>
 <span class="seg" style="--c:var(--coral)">إجاباتي عن الأسئلة الستة: <span class="ph">[إجاباتك]</span></span>
 <span class="seg" style="--c:var(--amber)">اسألني قبل الكتابة عمّا ينقص، سؤالًا واحدًا في كل مرة. لا تضف وظائف لم أذكرها؛ اقترحها في قسم منفصل بعنوان «أفكار للاحقًا».</span></div>
   <div class="legend"><span style="--c:var(--purple)">الدور</span><span style="--c:var(--teal)">التعليمات</span><span style="--c:var(--coral)">السياق</span><span style="--c:var(--amber)">التوقّع</span></div>
@@ -326,7 +345,7 @@
 <section class="slide" data-label="المواصفات التقنية">
   <div class="kicker">الخطوة 2 · المواصفات التقنية</div>
   <h2>«استجوبني أولًا»: أنت تقرّر، وهو يسأل</h2>
-  <div class="prompt s" data-tool="المحادثة نفسها · بعد BRD">أنا موظف حكومي غير تقني، لدي مستند متطلبات العمل (BRD) أعلاه. أريد منك إنشاء مستند المواصفات التقنية (Technical Specification Document) لهذا المشروع باللغة الإنجليزية بصيغة Markdown في ملف أستطيع تنزيله.
+  <div class="prompt s" data-tool="المحادثة نفسها · بعد PRD">أنا موظف حكومي غير تقني، لدي مستند متطلبات المنتج (PRD) أعلاه. أريد منك إنشاء مستند المواصفات التقنية (Technical Specification Document) لهذا المشروع باللغة الإنجليزية بصيغة Markdown في ملف أستطيع تنزيله.
 لا تفترض تفاصيل غير تقنية دون الرجوع إلي. استجوبني أولًا، وبما أنني غير تقني فبسّط أسئلتك لأفهمها وأجيب عنها.
 إذا كان التطبيق يحتاج التكامل مع خدمات خارجية، فابحث وساعدني في اختيار الأنسب والأقل تكلفة.</div>
   <div class="cols cols-2 mt">
@@ -434,13 +453,13 @@
   <h2>اختر المنصة بحسب ما تبنيه، لا بحسب شهرتها</h2>
   <table class="t small">
     <tr><th>المنصة</th><th>تناسب</th><th>ملاحظة</th></tr>
-    <tr><td><b>إطلاق</b> <span class="en">etlaq.sa</span></td><td>تطبيق ويب أو جوال بقاعدة بيانات وتسجيل دخول، بواجهة عربية</td><td>منصة سعودية، تبدأ بالوصف بالعربية، وفيها قوالب (حجز، متجر، دورات). فترة تجربة</td></tr>
+    <tr><td><img src="../assets/img/logos/etlaq-wordmark.webp" alt="إطلاق etlaq" style="height:2.2em;vertical-align:middle"> <span class="en">etlaq.sa</span></td><td>تطبيق ويب أو جوال بقاعدة بيانات وتسجيل دخول، بواجهة عربية</td><td>منصة سعودية، تبدأ بالوصف بالعربية، وفيها قوالب (حجز، متجر، دورات). فترة تجربة</td></tr>
     <tr><td><b>Lovable</b></td><td>تطبيق ويب بقاعدة بيانات وتسجيل دخول</td><td>رصيد يومي مجاني محدود. يقبل الصور والملفات في الرسالة</td></tr>
     <tr><td><b>Replit</b></td><td>تطبيقات تحتاج منطقًا أكثر، وتعديلًا لاحقًا</td><td>رصيد مجاني محدود. يقرأ replit.md تعليماتٍ دائمة</td></tr>
     <tr><td><b>Google AI Studio</b> · Build</td><td>نموذج سريع، خصوصًا ما يستخدم Gemini</td><td>مجاني بحساب Google</td></tr>
     <tr><td><b>Claude Artifacts</b> · <b>ChatGPT Sites</b></td><td>أداة شخصية أو عرض فكرة، دون قاعدة بيانات حقيقية</td><td>داخل المحادثة، ويُشارك برابط</td></tr>
   </table>
-  <div class="tools s mt"><span><img src="../assets/img/logos/lovable.svg" alt="">Lovable</span><span><img src="../assets/img/logos/replit.svg" alt="">Replit</span><span><img src="../assets/img/logos/gemini.svg" alt="">AI Studio</span><span><img src="../assets/img/logos/claude.svg" alt="">Artifacts</span><span><img src="../assets/img/logos/chatgpt.svg" alt="">Sites</span><span><img src="../assets/img/logos/bolt.svg" alt="">Bolt</span><span><img src="../assets/img/logos/v0.svg" alt="">v0</span></div>
+  <div class="tools s mt"><span><img src="../assets/img/logos/etlaq.png" alt="">إطلاق</span><span><img src="../assets/img/logos/lovable.svg" alt="">Lovable</span><span><img src="../assets/img/logos/replit.svg" alt="">Replit</span><span><img src="../assets/img/logos/gemini.svg" alt="">AI Studio</span><span><img src="../assets/img/logos/claude.svg" alt="">Artifacts</span><span><img src="../assets/img/logos/chatgpt.svg" alt="">Sites</span></div>
   <aside class="notes">الأرصدة المجانية تتغير، وتنفد بسرعة مع التعديلات الكثيرة؛ وهذا سبب إضافي للوثائق الجيدة. قبل أي بيانات حقيقية أو ربط بأنظمة: سياسة الجهة، وأين تُستضاف البيانات.</aside>
 </section>
 
@@ -540,7 +559,7 @@
       <h2>ابنِها</h2>
       <a class="nb" href="../labs/D4_3_build_it.html" target="_blank" rel="noopener">labs/D4_3_build_it.html ↗</a>
       <p class="small mt">من وثائق التمرين 4.2 (أو من الأسئلة الستة مباشرة إن لم تكملها) إلى أداة تعمل برابط، يختبرها زميل بمعيار القبول.</p>
-      <div class="tools s mt"><span><img src="../assets/img/logos/lovable.svg" alt="">Lovable</span><span><img src="../assets/img/logos/replit.svg" alt="">Replit</span><span><img src="../assets/img/logos/gemini.svg" alt="">AI Studio</span><span>إطلاق</span></div>
+      <div class="tools s mt"><span><img src="../assets/img/logos/lovable.svg" alt="">Lovable</span><span><img src="../assets/img/logos/replit.svg" alt="">Replit</span><span><img src="../assets/img/logos/gemini.svg" alt="">AI Studio</span><span><img src="../assets/img/logos/etlaq.png" alt="">إطلاق</span></div>
     </div>
     <ul class="checklist">
       <li>أول رسالة بالوثائق، وراجع الخطة <span class="min">5 د</span></li>
@@ -662,12 +681,12 @@
   <div class="kicker">التطبيقات تتغير كل شهر</div>
   <h2>واكب دون لهاث: ما يتغير، وما يبقى</h2>
   <div class="cols cols-2">
-    <div class="card c-amber"><h4>يتغير</h4><p class="small mb0">نماذج جديدة، واجهات، أسعار وحدود، تطبيقات تظهر وتختفي، ميزات تُدمج، أسماء تتبدّل. Gems في Gemini مثلًا تتحول إلى Skills ابتداءً من نوفمبر 2026.</p></div>
+    <div class="card c-amber"><h4>يتغير</h4><p class="small mb0">نماذج جديدة، واجهات، أسعار وحدود، تطبيقات تظهر وتختفي، ميزات تُدمج، أسماء تتبدّل. هذا العام وحده: NotebookLM صار Gemini Notebook، وGems تتحول إلى Skills، والإضافات حلّت محل المساعدات المخصّصة في ChatGPT.</p></div>
     <div class="card c-teal"><h4>يبقى</h4><p class="small mb0">التفويض، والوصف، والتحقق، والمسؤولية. أمر جيد ومعيار قبول وسجل تحقق تعمل في أي تطبيق.</p></div>
   </div>
   <div class="cols cols-2 mt">
     <div class="callout tip small"><b>قاعدة الفرز:</b> الخبر يعنيني إذا غيّر مهمتي، أو تطبيقي، أو سياسة جهتي. وما عدا ذلك يُؤجَّل.</div>
-    <div class="callout note small"><b>وقت ثابت:</b> نصف ساعة أسبوعيًا، ومراجعة ربع سنوية لتطبيقاتك وسياساتك وسجل تجاربك.</div>
+    <div class="callout note small"><b>وقت ثابت:</b> نصف ساعة أسبوعيًا، ومراجعة ربع سنوية لتطبيقاتك وسياساتك وسجل تجاربك. نموذج جديد؟ قارنه في <span class="en">arena.ai</span> و <span class="en">artificialanalysis.ai</span>، ثم جرّبه على أمر من مكتبتك.</div>
   </div>
 </section>
 

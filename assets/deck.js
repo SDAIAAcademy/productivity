@@ -2,7 +2,8 @@
    Keys: → ↓ PgDn Space = next · ← ↑ PgUp = previous · Home/End · f = fullscreen · Esc = exit fullscreen / close
          n = speaker notes · o = overview · ? = help · t = start/pause break timer on a break slide
    Language: <html lang="ar" dir="rtl"> switches the interface strings to Arabic and mirrors the layout (deck.css).
-   The keys stay the same in both directions, so presenter clickers (PgDn / →) keep working. */
+   In RTL the left/right arrows follow the reading direction (← = next, → = previous), like the progress bar.
+   ↓ PgDn Space stay "next" in both directions, so presenter clickers keep working. */
 (function () {
   const deck = document.querySelector('.deck');
   const slides = Array.from(deck.querySelectorAll(':scope > section.slide'));
@@ -96,11 +97,12 @@
     if (document.body.classList.contains('overview')) { e.preventDefault(); toggleOverview(false); show(i); }
   }));
 
+  const fwd = rtl ? '←' : '→', back = rtl ? '→' : '←';  // arrow keys follow the reading direction
   const help = document.createElement('div');
   help.className = 'help';
   help.innerHTML = '<div class="box"><h5>' + T.keys + '</h5><table>' +
-    '<tr><td><kbd>→</kbd><kbd>↓</kbd><kbd>Space</kbd></td><td>' + T.next + '</td></tr>' +
-    '<tr><td><kbd>←</kbd><kbd>↑</kbd></td><td>' + T.prev + '</td></tr>' +
+    '<tr><td><kbd>' + fwd + '</kbd><kbd>↓</kbd><kbd>Space</kbd></td><td>' + T.next + '</td></tr>' +
+    '<tr><td><kbd>' + back + '</kbd><kbd>↑</kbd></td><td>' + T.prev + '</td></tr>' +
     '<tr><td><kbd>Home</kbd><kbd>End</kbd></td><td>' + T.ends + '</td></tr>' +
     '<tr><td><kbd>F</kbd></td><td>' + T.full + '</td></tr>' +
     '<tr><td><kbd>Esc</kbd></td><td>' + T.esc + '</td></tr>' +
@@ -122,9 +124,11 @@
     const tag = (e.target.tagName || '').toLowerCase();
     if (tag === 'input' || tag === 'textarea') return;
     switch (e.key) {
-      case 'ArrowRight': case 'ArrowDown': case 'PageDown': case ' ': case 'Enter':
+      case 'ArrowRight': case 'ArrowLeft':
+        e.preventDefault(); ((e.key === 'ArrowLeft') === rtl ? next : prev)(); break;
+      case 'ArrowDown': case 'PageDown': case ' ': case 'Enter':
         e.preventDefault(); next(); break;
-      case 'ArrowLeft': case 'ArrowUp': case 'PageUp': case 'Backspace':
+      case 'ArrowUp': case 'PageUp': case 'Backspace':
         e.preventDefault(); prev(); break;
       case 'Home': e.preventDefault(); show(0); break;
       case 'End': e.preventDefault(); show(slides.length - 1); break;
