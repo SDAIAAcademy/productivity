@@ -15,7 +15,7 @@ data, research, custom assistants, agents and small apps built by describing the
 | 4 | الوكلاء والبرمجة التوليدية والتبنّي · Agents, vibe coding and adoption | [day4](https://sdaiaacademy.github.io/productivity/slides/day4.html) | 4.1 to 4.4 |
 | 5 | عروض المشروع الختامي · Capstone presentations | [day5](https://sdaiaacademy.github.io/productivity/slides/day5.html) | [capstone](https://sdaiaacademy.github.io/productivity/labs/capstone.html) |
 
-Each day has four sessions with a short break between them and a longer one at mid-day. Every session is about 20–25
+Each day has four sessions. Every session is about 20–25
 minutes of concepts and live demos followed by a 25-minute lab in real AI applications (ChatGPT, Claude, Gemini, Microsoft
 Copilot, HUMAIN Chat, Gemini Notebook, deep research, custom assistants, agents and vibe-coding platforms such as Etlaq,
 Lovable, Replit and Google AI Studio). Free tiers are enough for most labs, and every lab names a fallback.
