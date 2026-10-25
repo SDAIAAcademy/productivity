@@ -1,6 +1,6 @@
 # رفع الإنتاجية بالذكاء الاصطناعي · AI Productivity
 
-**SDAIA Academy · AI Fluency Track**: a 4-day hands-on course (4 sessions per day) plus a capstone presentation day,
+**SDAIA Academy · Data & AI Fluency Track**: a 4-day hands-on course (4 sessions per day) plus a capstone presentation day,
 delivered in Arabic. It takes employees and undergraduates from "I tried ChatGPT" to measured, safe, repeatable gains:
 decide what to delegate, describe it precisely, check what comes back and own the result, across writing, documents,
 data, research, custom assistants, agents and small apps built by describing them. No programming.
@@ -35,12 +35,13 @@ Undergraduates play a co-op trainee at the center, and most labs have a study va
 ```
 index.html          course page
 slides/             one HTML deck per day (Arabic, RTL)
-assets/             slide engine (deck.css, deck.js), lab page styles (lab.css, lab.js), logos
+assets/             tool logos used on the slides and lab pages
 labs/               lab guides (D{day}_{n}_*.html), capstone page, file pack and its generator (see labs/README.md)
 ```
 
-The slide engine is the one used in the Applied NLP and Data Engineering courses, with a right-to-left mode added.
-Add `?check` to a deck's URL to run its layout self-check. It flags overflowing slides and clipped lines.
+The slide engine, the course-page style and the lab-page style are shared by all Academy courses and served from
+[SDAIAAcademy/slides](https://github.com/SDAIAAcademy/slides) (`https://sdaiaacademy.github.io/slides/`); the decks declare
+`data-track="fluency"`. Add `?check` to a deck's URL to run its layout self-check. It flags overflowing slides and clipped lines.
 
 ## Sources
 
